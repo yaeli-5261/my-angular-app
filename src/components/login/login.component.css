@@ -1,0 +1,47 @@
+/* עיצוב הכללי */
+.login-card {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* עיצוב שדות קלט */
+  mat-form-field.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* עיצוב כפתור השליחה */
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  button.mat-raised-button {
+    width: 100%;
+  }
+  
+  /* קישור להרשמה */
+  .register-link {
+    text-decoration: underline;
+    font-size: 14px;
+    color: #3f51b5;
+  }
+  
+  .register-link:hover {
+    color: #303f9f;
+  }
+  
+  /* טיפולי עיצוב לשגיאות */
+  mat-error {
+    font-size: 12px;
+    color: #f44336;
+  }
+  
+  /* כפתור הסתיר/הראה סיסמה */
+  mat-icon {
+    font-size: 20px;
+  }
+  

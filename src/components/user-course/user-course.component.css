@@ -1,0 +1,332 @@
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin: 30px;
+    }
+
+   
+    .lesson-container {
+        width: 48%; 
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .lesson-container h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .lesson-form {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .lesson-form label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .lesson-form input,
+    .lesson-form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    .lesson-form button {
+        background: #3f51b5;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .lesson-form button:hover {
+        background: #2c387e;
+    }
+
+    .lesson-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .lesson-list li {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+    }
+
+  
+    .courses-container {
+        width: 48%;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .courses-container h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .error-message {
+        background: #f8d7da;
+        color: #721c24;
+        padding: 10px 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .courses-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .course-item {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+    }
+
+    .card-header {
+        background: #00796b;
+        color: #fff;
+        padding: 10px 15px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .card-header h3 {
+        margin: 0;
+        font-size: 1.3em;
+    }
+
+    .card-body {
+        padding: 15px;
+        color: #555;
+    }
+
+    .card-body p {
+        margin: 8px 0;
+    }
+
+    .course-form {
+        margin-top: 30px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-form .card-header {
+        background: #3f51b5;
+        color: #fff;
+        padding: 15px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center;
+    }
+
+    .course-form .card-body {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .error {
+        color: #d32f2f;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+    .form-buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .form-buttons button {
+        margin: 0 10px;
+    }
+
+
+
+.course-form.card {
+    position: fixed;
+    top: 10%;
+    right: -400px;
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    transition: right 0.3s ease-in-out; 
+    z-index: 1000; 
+  }
+  
+  .course-form.card.show {
+    right: 0; 
+  }
+  
+  .card-header h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.9rem;
+  }
+  .course-form {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px; 
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-form.show {
+    transform: translateX(0);
+  }
+  
+  .course-form.hide {
+    transform: translateX(100%); 
+  }
+ 
+
+
+
+
+
+/* מיקום הצגת הטופס בצד ימין של המסך */
+.course-form.card {
+    position: fixed;
+    top: 10%;
+    right: 0; /* הטופס יהיה מימין */
+    width: 350px; /* קצת פחות מ-400px כדי להשאיר מקום */
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 12px; /* פינות מעוגלות יותר */
+    padding: 30px; /* ריווח פנימי רחב יותר */
+    margin: 10px; /* ריווח חיצוני מהקירות */
+    transition: transform 0.3s ease-in-out; /* אנימציה לחלק הפתיחה */
+    z-index: 1000; /* וודא שהטופס יופיע מעל התוכן */
+    height: 90%; /* גובה הטופס יהיה 90% מהמסך */
+    overflow-y: auto; /* יאפשר גלילה אם יש הרבה תוכן */
+    box-sizing: border-box; /* לוודא שה-padding וה-margin לא משפיעים על הרוחב הכולל */
+}
+
+/* פתיחת הטופס */
+.course-form.card.show {
+    transform: translateX(0); /* פתיחת הטופס ל-right 0 */
+}
+
+/* מצב הסתרה של הטופס */
+.course-form.card.hide {
+    transform: translateX(100%); /* סגירת הטופס */
+}
+
+/* כותרת הטופס */
+.card-header h2 {
+    margin-bottom: 15px; /* הגדלתי את הריווח מתחת לכותרת */
+    font-size: 1.6rem; /* הגדלת גודל הפונט */
+    font-weight: 600;
+    text-align: center; /* מיקוד הכותרת */
+}
+
+/* התאמות קטנות למבנה הטופס */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem; /* הגדלת גודל הטקסט של השדה */
+    margin-bottom: 8px; /* הוספת ריווח מתחת לשם השדה */
+    color: #333; /* צבע כהה יותר */
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px; /* ריווח פנימי יותר מרווח */
+    font-size: 1rem;
+    margin-bottom: 15px; /* ריווח בין השדות */
+    border-radius: 8px; /* פינות מעוגלות */
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* לוודא שה-padding לא משפיע על הרוחב */
+}
+
+/* עיצוב כפתורים */
+.form-buttons button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px; /* פינות מעוגלות */
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: #3f51b5; /* שינוי צבע בעת ריחוף */
+    color: white;
+}
+
+.error {
+    color: #d32f2f; /* צבע אדום בוהק יותר */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* התאמת הגלילה בעת הצגת הטופס */
+.course-form.card.show {
+    transform: translateX(0); /* יזיז את הטופס מהצד */
+}

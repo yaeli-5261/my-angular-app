@@ -1,0 +1,152 @@
+/* טופס שנפתח בצד ימין */
+.course-form.card {
+    position: fixed;
+    top: 10%;
+    right: 0; /* הטופס יהיה ממוקם בצד ימין */
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    height: 80%; /* גובה הטופס יהיה 80% מהמסך */
+    max-width: 100%; /* וודא שהטופס לא יברח בגודל רוחב */
+    overflow-y: auto;
+    box-sizing: border-box; /* עוזר לשמור על חישוב רוחב כולל של כל האלמנטים */
+  }
+  
+  /* הצגת הטופס */
+  .course-form.card.show {
+    right: 0;
+  }
+  
+  /* כותרת הטופס */
+  .card-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2980b9; /* צבע כחול */
+  }
+  
+  /* עיצוב השדות */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .mat-form-field label {
+    font-size: 1.1rem;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* כפתורי שליחה ועריכה */
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .form-buttons button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-buttons button:hover {
+    background-color: #2980b9; /* צבע כחול בהיר בעת ריחוף */
+    color: white;
+  }
+  
+  /* כפתור מחיקה */
+  .btn-delete {
+    background-color: #e74c3c; /* צבע אדום */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c0392b;
+  }
+  
+  /* עיצוב כפתורי עריכה */
+  .btn-edit {
+    background-color: #f39c12; /* צבע כתום */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-edit:hover {
+    background-color: #e67e22;
+  }
+  
+  /* עיצוב כרטיסי השיעורים */
+  .lesson-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .lesson-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .lesson-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .lesson-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2980b9;
+  }
+  
+  .lesson-content {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  /* כפתור מחיקת שיעור בתוך הכרטיס */
+  .lesson-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .lesson-actions button {
+    background-color: #2980b9;
+    color: rgb(254, 250, 250);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .lesson-actions button:hover {
+    background-color: #21618c;
+  }
+  

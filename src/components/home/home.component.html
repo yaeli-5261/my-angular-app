@@ -1,0 +1,34 @@
+<div class="home-container">
+    <div class="hero">
+      <h1>Empower Your Learning Journey</h1>
+      <p>Discover top-notch courses and enhance your skills today.</p>
+      <div class="buttons">
+        @if(showLoginButton){
+            <button class="login-button" (click)="handleLoginClick()">Get Started</button>
+        }
+      </div>
+    </div>
+  
+    <div class="features">
+      <mat-card class="feature-card">
+        <mat-icon>school</mat-icon>
+        <h3>Diverse Course Catalog</h3>
+        <p>Explore courses across various fields and expertise levels.</p>
+      </mat-card>
+  
+      <mat-card class="feature-card">
+        <mat-icon>person_add</mat-icon>
+        <h3>Seamless Registration</h3>
+        <p>Join easily and begin your learning adventure instantly.</p>
+      </mat-card>
+  
+      <mat-card class="feature-card">
+        <mat-icon>public</mat-icon>
+        <h3>Global Access</h3>
+        <p>Learn from anywhere, on any device, at your own pace.</p>
+      </mat-card>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>
+  

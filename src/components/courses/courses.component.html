@@ -1,0 +1,25 @@
+<mat-card class="courses-card">
+  <mat-card-content>
+    <h2>Courses List</h2>
+    <mat-list>
+      @for(course of courses;track course){
+      <mat-list-item style="height: 200px;">
+        <div class="course-details">
+          <h3>{{ course.title}}</h3>
+          <p>{{ course.description }}</p>
+
+        </div>
+        <div class="course-actions">
+
+          @if(course)
+          { 
+            <button mat-raised-button color="warn" (click)="showDetailsCourse(course.id)"> Details </button>
+          
+          }
+        </div>
+
+      </mat-list-item>
+      }
+    </mat-list>
+
+    <router-outlet></router-outlet>

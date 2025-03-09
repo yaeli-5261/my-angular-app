@@ -1,0 +1,54 @@
+@if(course && user){
+<div class="course-details-container">
+
+    <div class="course-header">
+        <h2 class="course-title">{{ course.title | uppercase }}</h2>
+
+        <p class="course-description">{{ course.description }}</p>
+        <p class="course-teacher">Instructor: <strong>{{ user.name }}</strong></p>
+    </div>
+
+
+    <div class="lessons-section">
+        <h3 class="lessons-title">The Lessons in this Course</h3>
+        <ul class="lessons-list">
+            @for(lesson of lessons;track lessons)
+            { <li class="lesson-item">
+                <div class="lesson-header">
+                    <h4 class="lesson-title">{{ lesson.title }}</h4>
+                </div>
+                <p class="lesson-content">{{ lesson.content }}</p>
+            </li>}
+
+        </ul>
+    </div>
+
+
+    @if(!isTeacher())
+    {
+    <!-- <div class="enrollment-button"> -->
+        <!-- <button mat-raised-button color="warn" appButtonHover (click)="enrollInCourse()" class="btn-enroll">
+            Register 📚
+        </button>
+    </div> -->
+
+    <div class="enrollment-button">
+        <button 
+        mat-raised-button 
+        appButtonHover 
+        btnColor="blue"
+        (click)="enrollInCourse()"
+        class="btn-enroll">
+        Register 📚
+    </button>
+    </div>
+
+
+    }
+   
+    <!-- <p   >בעזרת ה!!</p> -->
+   
+
+    @if(message != null)
+    {<p class="message-success text-green-600 mt-4">{{ message }}</p>}
+</div>}

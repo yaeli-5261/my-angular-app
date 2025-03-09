@@ -1,0 +1,92 @@
+@if(isTeacher()){
+
+    <button  mat-raised-button color="warn" (click)="addCourse()">
+      <mat-icon>add</mat-icon>
+      add Course
+    </button>
+}
+
+@if(showForm)
+{
+<div class="course-form card">
+    <div class="card-header">
+        <h2>{{ isEditing ? 'edit Course' : 'New Course' }}</h2>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="courseForm" (ngSubmit)="onSubmitCourse()">
+            <div class="form-group">
+                <label for="title">title:</label>
+                <input id="title" formControlName="title" type="text" class="form-control" />
+                @if(title?.invalid && title?.touched)
+                {
+                <div class="error">required</div>
+                }
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" formControlName="description" class="form-control"></textarea>
+                @if(description?.invalid && description?.touched)
+                {
+                <div class="error"> required </div>
+                }
+            </div>
+            <div class="form-buttons">
+                <button type="submit" [disabled]="courseForm.invalid" mat-raised-button color="primary">
+                    {{ isEditing ? 'edit course' : 'Create Course ' }}
+                </button>
+                <button type="button" (click)="showForm = false" mat-raised-button color="warn">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+}
+
+<div class="courses-container">
+    <h2> Your Courses </h2>
+
+    @if(errorMessage)
+    {
+    <div class="error-message">
+        {{ errorMessage }}
+    </div>
+    }
+
+    @if(courses.length > 0)
+    {
+    <div class="courses-list">
+        <ul class="course-list">
+            @for(course of courses; track course.id)
+            {
+            <li class="course-item card">
+                <div class="card-header">
+                    <h3>{{ course.title }}</h3>
+                </div>
+                <div class="card-body">
+                    <p>{{ course.description }}</p>
+                    <p><strong>Teacher:</strong> {{ course.teacherId }}</p>
+                    @if(!isTeacher())
+                    {
+                    <button mat-raised-button color="warn" (click)="unenrollStudent(course.id)">Leave</button>
+                    }
+                    @else()
+                    {
+                    <button mat-raised-button color="warn" (click)="editCourse(course.id)">Edit</button>
+                    <button mat-raised-button color="warn" (click)="deleteCourse(course.id)">Delete</button>
+                    <button mat-raised-button color="warn" (click)="goLessonForm(course.id)">All Lesson</button>
+                    }
+                </div>
+            </li>
+
+
+            }
+        </ul>
+    </div>
+    }
+    @else{
+    <ng-template >
+        <p> You have nothing Course </p>
+    </ng-template>
+    }
+</div>

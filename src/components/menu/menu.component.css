@@ -1,0 +1,170 @@
+ .top-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  background-color: #2980b9;
+  color: white;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.login-button {
+  margin-right: 1em;
+}
+
+.main-container {
+  margin-top: 64px; 
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+
+.side-sidenav {
+  width: 250px;
+}
+
+.mat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.mat-list-item:hover {
+  background-color: #16a085;
+}
+
+.mat-icon {
+  margin-left: 10px;
+}
+
+.content {
+  padding: 20px;
+  background-color: #ecf0f1;
+  flex-grow: 1;
+}
+
+button.mat-icon-button {
+  color: white;
+}
+
+button.mat-icon-button:hover {
+  background-color: #303f9f;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .side-sidenav {
+    width: 200px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+
+.main-container {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?education,books') no-repeat center center/cover;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 50px 20px;
+  color: rgb(7, 6, 6);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 800px;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+}
+
+.recommendations {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .course-card {
+    background: #303f9f(145, 197, 207, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    mat-icon {
+      font-size: 40px;
+      color: #303f9f;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #090909;
+    }
+  }
+} 
+
+/* מיקום הצגת הטופס בצד ימין של המסך */
+.course-form.card {
+  position: fixed;
+  top: 10%;
+  right: -400px; /* בתחילה הטופס יהיה מחוץ למסך */
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  transition: right 0.3s ease-in-out; /* האנימציה של פתיחת הטופס */
+  z-index: 1000; /* וודא שהטופס יופיע מעל התוכן */
+}
+
+.course-form.card.show {
+  right: 0; /* כאשר הטופס פתוח, המיקום יהיה בצד ימין */
+}
+
+/* עיצוב כותרת הטופס */
+.card-header h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* עיצוב הטופס */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
